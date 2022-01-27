@@ -30,3 +30,5 @@ namespace atomic_ns = boost;
 #endif // !defined(BOOST_FILESYSTEM_NO_CXX20_ATOMIC_REF)
 
 #endif // BOOST_FILESYSTEM_SRC_ATOMIC_REF_HPP_
+
+
