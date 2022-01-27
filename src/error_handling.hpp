@@ -1,4 +1,5 @@
-//  error_handling.hpp  --------------------------------------------------------------------//
+//  error_handling.hpp
+//  --------------------------------------------------------------------//
 
 //  Copyright 2002-2009, 2014 Beman Dawes
 //  Copyright 2019 Andrey Semashev
@@ -13,15 +14,15 @@
 #ifndef BOOST_FILESYSTEM_SRC_ERROR_HANDLING_HPP_
 #define BOOST_FILESYSTEM_SRC_ERROR_HANDLING_HPP_
 
-#include <cerrno>
-#include <boost/system/error_code.hpp>
 #include <boost/filesystem/config.hpp>
 #include <boost/filesystem/exception.hpp>
+#include <boost/system/error_code.hpp>
+#include <cerrno>
 
 #if defined(BOOST_WINDOWS_API)
 #include <boost/winapi/basic_types.hpp>
-#include <boost/winapi/get_last_error.hpp>
 #include <boost/winapi/error_codes.hpp>
+#include <boost/winapi/get_last_error.hpp>
 #endif
 
 namespace boost {
@@ -51,59 +52,50 @@ typedef boost::winapi::DWORD_ err_t;
 
 #endif
 
-//  error handling helpers  ----------------------------------------------------------//
+//  error handling helpers
+//  ----------------------------------------------------------//
 
 // Implemented in exception.cpp
 void emit_error(err_t error_num, system::error_code* ec, const char* message);
-void emit_error(err_t error_num, path const& p, system::error_code* ec, const char* message);
-void emit_error(err_t error_num, path const& p1, path const& p2, system::error_code* ec, const char* message);
+void emit_error(err_t error_num, path const& p, system::error_code* ec,
+                const char* message);
+void emit_error(err_t error_num, path const& p1, path const& p2,
+                system::error_code* ec, const char* message);
 
-inline bool error(err_t error_num, system::error_code* ec, const char* message)
-{
-    if (BOOST_LIKELY(!error_num))
-    {
-        if (ec)
-            ec->clear();
-        return false;
-    }
-    else
-    { //  error
-        filesystem::emit_error(error_num, ec, message);
-        return true;
-    }
+inline bool error(err_t error_num, system::error_code* ec,
+                  const char* message) {
+  if (BOOST_LIKELY(!error_num)) {
+    if (ec) ec->clear();
+    return false;
+  } else {  //  error
+    filesystem::emit_error(error_num, ec, message);
+    return true;
+  }
 }
 
-inline bool error(err_t error_num, path const& p, system::error_code* ec, const char* message)
-{
-    if (BOOST_LIKELY(!error_num))
-    {
-        if (ec)
-            ec->clear();
-        return false;
-    }
-    else
-    { //  error
-        filesystem::emit_error(error_num, p, ec, message);
-        return true;
-    }
+inline bool error(err_t error_num, path const& p, system::error_code* ec,
+                  const char* message) {
+  if (BOOST_LIKELY(!error_num)) {
+    if (ec) ec->clear();
+    return false;
+  } else {  //  error
+    filesystem::emit_error(error_num, p, ec, message);
+    return true;
+  }
 }
 
-inline bool error(err_t error_num, path const& p1, path const& p2, system::error_code* ec, const char* message)
-{
-    if (BOOST_LIKELY(!error_num))
-    {
-        if (ec)
-            ec->clear();
-        return false;
-    }
-    else
-    { //  error
-        filesystem::emit_error(error_num, p1, p2, ec, message);
-        return true;
-    }
+inline bool error(err_t error_num, path const& p1, path const& p2,
+                  system::error_code* ec, const char* message) {
+  if (BOOST_LIKELY(!error_num)) {
+    if (ec) ec->clear();
+    return false;
+  } else {  //  error
+    filesystem::emit_error(error_num, p1, p2, ec, message);
+    return true;
+  }
 }
 
-} // namespace filesystem
-} // namespace boost
+}  // namespace filesystem
+}  // namespace boost
 
-#endif // BOOST_FILESYSTEM_SRC_ERROR_HANDLING_HPP_
+#endif  // BOOST_FILESYSTEM_SRC_ERROR_HANDLING_HPP_

@@ -1,4 +1,5 @@
-//  platform_config.hpp  --------------------------------------------------------------------//
+//  platform_config.hpp
+//  --------------------------------------------------------------------//
 
 //  Copyright 2020 Andrey Semashev
 
@@ -10,7 +11,8 @@
 #ifndef BOOST_FILESYSTEM_PLATFORM_CONFIG_HPP_
 #define BOOST_FILESYSTEM_PLATFORM_CONFIG_HPP_
 
-//  define 64-bit offset macros BEFORE including boost/config.hpp (see ticket #5355)
+//  define 64-bit offset macros BEFORE including boost/config.hpp (see ticket
+//  #5355)
 #if defined(__ANDROID__) && defined(__ANDROID_API__) && __ANDROID_API__ < 24
 // Android fully supports 64-bit file offsets only for API 24 and above.
 //
@@ -25,7 +27,8 @@
 // Android NDK developers consider it the expected behavior.
 // See their official position here:
 // - https://github.com/android-ndk/ndk/issues/501#issuecomment-326447479
-// - https://android.googlesource.com/platform/bionic/+/a34817457feee026e8702a1d2dffe9e92b51d7d1/docs/32-bit-abi.md#32_bit-abi-bugs
+// -
+// https://android.googlesource.com/platform/bionic/+/a34817457feee026e8702a1d2dffe9e92b51d7d1/docs/32-bit-abi.md#32_bit-abi-bugs
 //
 // Thus we do not define _FILE_OFFSET_BITS in such case.
 #else
@@ -54,22 +57,24 @@
 #endif
 
 #if defined(__APPLE__) || defined(__MACH__)
-// Enable newer ABI on Mac OS 10.5 and later, which is needed for struct stat to have birthtime members
+// Enable newer ABI on Mac OS 10.5 and later, which is needed for struct stat to
+// have birthtime members
 #define _DARWIN_USE_64_BIT_INODE 1
 #endif
 
 #ifndef _POSIX_PTHREAD_SEMANTICS
-#define _POSIX_PTHREAD_SEMANTICS // Sun readdir_r() needs this
+#define _POSIX_PTHREAD_SEMANTICS  // Sun readdir_r() needs this
 #endif
 
-#if !defined(_INCLUDE_STDCSOURCE_199901) && (defined(hpux) || defined(_hpux) || defined(__hpux))
+#if !defined(_INCLUDE_STDCSOURCE_199901) && \
+    (defined(hpux) || defined(_hpux) || defined(__hpux))
 // For HP-UX, request that WCHAR_MAX and WCHAR_MIN be defined as macros,
 // not casts. See ticket 5048
 #define _INCLUDE_STDCSOURCE_199901
 #endif
 
-#if defined(_WIN32) || defined(_WIN64) || defined(__WIN32__) || defined(__TOS_WIN__) || defined(__WINDOWS__) || \
-    defined(__CYGWIN__)
+#if defined(_WIN32) || defined(_WIN64) || defined(__WIN32__) || \
+    defined(__TOS_WIN__) || defined(__WINDOWS__) || defined(__CYGWIN__)
 // Define target Windows version macros before including any other headers
 #include <boost/winapi/config.hpp>
 #endif
@@ -80,4 +85,4 @@
 
 #include <boost/filesystem/config.hpp>
 
-#endif // BOOST_FILESYSTEM_PLATFORM_CONFIG_HPP_
+#endif  // BOOST_FILESYSTEM_PLATFORM_CONFIG_HPP_

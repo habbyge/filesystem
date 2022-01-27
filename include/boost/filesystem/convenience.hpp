@@ -15,38 +15,30 @@
 #define BOOST_FILESYSTEM_CONVENIENCE_HPP
 
 #include <boost/filesystem/config.hpp>
+#include <boost/filesystem/detail/header.hpp>  // must be the last #include
 #include <boost/filesystem/operations.hpp>
 #include <boost/system/error_code.hpp>
-
-#include <boost/filesystem/detail/header.hpp> // must be the last #include
 
 namespace boost {
 namespace filesystem {
 
 #ifndef BOOST_FILESYSTEM_NO_DEPRECATED
 
-inline std::string extension(const path& p)
-{
-    return p.extension().string();
-}
+inline std::string extension(const path& p) { return p.extension().string(); }
 
-inline std::string basename(const path& p)
-{
-    return p.stem().string();
-}
+inline std::string basename(const path& p) { return p.stem().string(); }
 
-inline path change_extension(const path& p, const path& new_extension)
-{
-    path new_p(p);
-    new_p.replace_extension(new_extension);
-    return new_p;
+inline path change_extension(const path& p, const path& new_extension) {
+  path new_p(p);
+  new_p.replace_extension(new_extension);
+  return new_p;
 }
 
 #endif
 
-} // namespace filesystem
-} // namespace boost
+}  // namespace filesystem
+}  // namespace boost
 
 #include <boost/filesystem/detail/footer.hpp>
 
-#endif // BOOST_FILESYSTEM_CONVENIENCE_HPP
+#endif  // BOOST_FILESYSTEM_CONVENIENCE_HPP

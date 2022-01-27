@@ -1,4 +1,5 @@
-//  private_config.hpp  ----------------------------------------------------------------//
+//  private_config.hpp
+//  ----------------------------------------------------------------//
 
 //  Copyright 2021 Andrey Semashev
 
@@ -15,7 +16,7 @@
 #include <boost/filesystem/config.hpp>
 
 #if defined(BOOST_FILESYSTEM_HAS_INIT_PRIORITY)
-#define BOOST_FILESYSTEM_INIT_PRIORITY(n) __attribute__ ((init_priority(n)))
+#define BOOST_FILESYSTEM_INIT_PRIORITY(n) __attribute__((init_priority(n)))
 #else
 #define BOOST_FILESYSTEM_INIT_PRIORITY(n)
 #endif
@@ -32,38 +33,40 @@
 
 #if defined(__has_feature) && defined(__has_attribute)
 #if __has_feature(memory_sanitizer) && __has_attribute(no_sanitize)
-#define BOOST_FILESYSTEM_NO_SANITIZE_MEMORY __attribute__ ((no_sanitize("memory")))
+#define BOOST_FILESYSTEM_NO_SANITIZE_MEMORY \
+  __attribute__((no_sanitize("memory")))
 #endif
-#endif // defined(__has_feature) && defined(__has_attribute)
+#endif  // defined(__has_feature) && defined(__has_attribute)
 
 #ifndef BOOST_FILESYSTEM_NO_SANITIZE_MEMORY
 #define BOOST_FILESYSTEM_NO_SANITIZE_MEMORY
 #endif
 
 #if defined(_MSC_VER)
-#if _MSC_VER < 1300 || _MSC_VER > 1900 // 1300 == VC++ 7.0, 1900 == VC++ 14.0
-typedef void (__cdecl* init_func_ptr_t)();
+#if _MSC_VER < 1300 || _MSC_VER > 1900  // 1300 == VC++ 7.0, 1900 == VC++ 14.0
+typedef void(__cdecl* init_func_ptr_t)();
 #define BOOST_FILESYSTEM_INITRETSUCCESS_V
 #define BOOST_FILESYSTEM_INIT_FUNC void __cdecl
 #else
-typedef int (__cdecl* init_func_ptr_t)();
+typedef int(__cdecl* init_func_ptr_t)();
 #define BOOST_FILESYSTEM_INITRETSUCCESS_V 0
 #define BOOST_FILESYSTEM_INIT_FUNC int __cdecl
 #endif
-#else // defined(_MSC_VER)
+#else  // defined(_MSC_VER)
 typedef void (*init_func_ptr_t)();
 #define BOOST_FILESYSTEM_INITRETSUCCESS_V
 #define BOOST_FILESYSTEM_INIT_FUNC void
-#endif // defined(_MSC_VER)
+#endif  // defined(_MSC_VER)
 
 #if defined(__has_attribute)
 #if __has_attribute(__used__)
-#define BOOST_FILESYSTEM_ATTRIBUTE_RETAIN __attribute__ ((__used__))
+#define BOOST_FILESYSTEM_ATTRIBUTE_RETAIN __attribute__((__used__))
 #endif
 #endif
 
-#if !defined(BOOST_FILESYSTEM_ATTRIBUTE_RETAIN) && defined(__GNUC__) && (__GNUC__ * 100 + __GNUC_MINOR__) >= 402
-#define BOOST_FILESYSTEM_ATTRIBUTE_RETAIN __attribute__ ((__used__))
+#if !defined(BOOST_FILESYSTEM_ATTRIBUTE_RETAIN) && defined(__GNUC__) && \
+    (__GNUC__ * 100 + __GNUC_MINOR__) >= 402
+#define BOOST_FILESYSTEM_ATTRIBUTE_RETAIN __attribute__((__used__))
 #endif
 
 #if !defined(BOOST_FILESYSTEM_ATTRIBUTE_RETAIN)
@@ -71,4 +74,4 @@ typedef void (*init_func_ptr_t)();
 #define BOOST_FILESYSTEM_ATTRIBUTE_RETAIN
 #endif
 
-#endif // BOOST_FILESYSTEM_SRC_PRIVATE_CONFIG_HPP_
+#endif  // BOOST_FILESYSTEM_SRC_PRIVATE_CONFIG_HPP_

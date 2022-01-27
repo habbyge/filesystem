@@ -1,0 +1,47 @@
+[
+{
+  "directory": "/Users/bytedance/filesystem/build",
+  "command": "/usr/bin/clang++ -DBOOST_FILESYSTEM_HAS_INIT_PRIORITY -DBOOST_FILESYSTEM_NO_CXX20_ATOMIC_REF -DBOOST_FILESYSTEM_NO_LIB -DBOOST_FILESYSTEM_SOURCE -DBOOST_FILESYSTEM_STATIC_LINK=1 -I/Users/bytedance/filesystem/include -I/Users/bytedance/filesystem/src -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.0.sdk -o CMakeFiles/boost_filesystem.dir/src/codecvt_error_category.cpp.o -c /Users/bytedance/filesystem/src/codecvt_error_category.cpp",
+  "file": "/Users/bytedance/filesystem/src/codecvt_error_category.cpp"
+},
+{
+  "directory": "/Users/bytedance/filesystem/build",
+  "command": "/usr/bin/clang++ -DBOOST_FILESYSTEM_HAS_INIT_PRIORITY -DBOOST_FILESYSTEM_NO_CXX20_ATOMIC_REF -DBOOST_FILESYSTEM_NO_LIB -DBOOST_FILESYSTEM_SOURCE -DBOOST_FILESYSTEM_STATIC_LINK=1 -I/Users/bytedance/filesystem/include -I/Users/bytedance/filesystem/src -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.0.sdk -o CMakeFiles/boost_filesystem.dir/src/exception.cpp.o -c /Users/bytedance/filesystem/src/exception.cpp",
+  "file": "/Users/bytedance/filesystem/src/exception.cpp"
+},
+{
+  "directory": "/Users/bytedance/filesystem/build",
+  "command": "/usr/bin/clang++ -DBOOST_FILESYSTEM_HAS_INIT_PRIORITY -DBOOST_FILESYSTEM_NO_CXX20_ATOMIC_REF -DBOOST_FILESYSTEM_NO_LIB -DBOOST_FILESYSTEM_SOURCE -DBOOST_FILESYSTEM_STATIC_LINK=1 -I/Users/bytedance/filesystem/include -I/Users/bytedance/filesystem/src -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.0.sdk -o CMakeFiles/boost_filesystem.dir/src/operations.cpp.o -c /Users/bytedance/filesystem/src/operations.cpp",
+  "file": "/Users/bytedance/filesystem/src/operations.cpp"
+},
+{
+  "directory": "/Users/bytedance/filesystem/build",
+  "command": "/usr/bin/clang++ -DBOOST_FILESYSTEM_HAS_INIT_PRIORITY -DBOOST_FILESYSTEM_NO_CXX20_ATOMIC_REF -DBOOST_FILESYSTEM_NO_LIB -DBOOST_FILESYSTEM_SOURCE -DBOOST_FILESYSTEM_STATIC_LINK=1 -I/Users/bytedance/filesystem/include -I/Users/bytedance/filesystem/src -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.0.sdk -o CMakeFiles/boost_filesystem.dir/src/directory.cpp.o -c /Users/bytedance/filesystem/src/directory.cpp",
+  "file": "/Users/bytedance/filesystem/src/directory.cpp"
+},
+{
+  "directory": "/Users/bytedance/filesystem/build",
+  "command": "/usr/bin/clang++ -DBOOST_FILESYSTEM_HAS_INIT_PRIORITY -DBOOST_FILESYSTEM_NO_CXX20_ATOMIC_REF -DBOOST_FILESYSTEM_NO_LIB -DBOOST_FILESYSTEM_SOURCE -DBOOST_FILESYSTEM_STATIC_LINK=1 -I/Users/bytedance/filesystem/include -I/Users/bytedance/filesystem/src -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.0.sdk -o CMakeFiles/boost_filesystem.dir/src/path.cpp.o -c /Users/bytedance/filesystem/src/path.cpp",
+  "file": "/Users/bytedance/filesystem/src/path.cpp"
+},
+{
+  "directory": "/Users/bytedance/filesystem/build",
+  "command": "/usr/bin/clang++ -DBOOST_FILESYSTEM_HAS_INIT_PRIORITY -DBOOST_FILESYSTEM_NO_CXX20_ATOMIC_REF -DBOOST_FILESYSTEM_NO_LIB -DBOOST_FILESYSTEM_SOURCE -DBOOST_FILESYSTEM_STATIC_LINK=1 -I/Users/bytedance/filesystem/include -I/Users/bytedance/filesystem/src -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.0.sdk -o CMakeFiles/boost_filesystem.dir/src/path_traits.cpp.o -c /Users/bytedance/filesystem/src/path_traits.cpp",
+  "file": "/Users/bytedance/filesystem/src/path_traits.cpp"
+},
+{
+  "directory": "/Users/bytedance/filesystem/build",
+  "command": "/usr/bin/clang++ -DBOOST_FILESYSTEM_HAS_INIT_PRIORITY -DBOOST_FILESYSTEM_NO_CXX20_ATOMIC_REF -DBOOST_FILESYSTEM_NO_LIB -DBOOST_FILESYSTEM_SOURCE -DBOOST_FILESYSTEM_STATIC_LINK=1 -I/Users/bytedance/filesystem/include -I/Users/bytedance/filesystem/src -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.0.sdk -o CMakeFiles/boost_filesystem.dir/src/portability.cpp.o -c /Users/bytedance/filesystem/src/portability.cpp",
+  "file": "/Users/bytedance/filesystem/src/portability.cpp"
+},
+{
+  "directory": "/Users/bytedance/filesystem/build",
+  "command": "/usr/bin/clang++ -DBOOST_FILESYSTEM_HAS_INIT_PRIORITY -DBOOST_FILESYSTEM_NO_CXX20_ATOMIC_REF -DBOOST_FILESYSTEM_NO_LIB -DBOOST_FILESYSTEM_SOURCE -DBOOST_FILESYSTEM_STATIC_LINK=1 -I/Users/bytedance/filesystem/include -I/Users/bytedance/filesystem/src -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.0.sdk -o CMakeFiles/boost_filesystem.dir/src/unique_path.cpp.o -c /Users/bytedance/filesystem/src/unique_path.cpp",
+  "file": "/Users/bytedance/filesystem/src/unique_path.cpp"
+},
+{
+  "directory": "/Users/bytedance/filesystem/build",
+  "command": "/usr/bin/clang++ -DBOOST_FILESYSTEM_HAS_INIT_PRIORITY -DBOOST_FILESYSTEM_NO_CXX20_ATOMIC_REF -DBOOST_FILESYSTEM_NO_LIB -DBOOST_FILESYSTEM_SOURCE -DBOOST_FILESYSTEM_STATIC_LINK=1 -I/Users/bytedance/filesystem/include -I/Users/bytedance/filesystem/src -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.0.sdk -o CMakeFiles/boost_filesystem.dir/src/utf8_codecvt_facet.cpp.o -c /Users/bytedance/filesystem/src/utf8_codecvt_facet.cpp",
+  "file": "/Users/bytedance/filesystem/src/utf8_codecvt_facet.cpp"
+}
+]
